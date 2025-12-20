@@ -1,11 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-import webdriver_manager.chrome
 from time import sleep
-import pytest
-
-# def test_ui_shubham()
 
 url="https://www.saucedemo.com/"
 #Open Google chrome
@@ -28,11 +23,7 @@ webelement_of_password_input.send_keys("secret_sauce")
 # clicking on the Login Button
 login_btn = driver.find_element(By.ID, "login-button")
 login_btn.click()
-sleep(2)
-
-# #Clicking on the Twitter Icon
-webelement_of_twitter = driver.find_element(By.ID, "social-twitter")
-# webelement_of_twitter.click()
+sleep(5)
 
 #Clicking on the menu button
 webelement_of_menu = driver.find_element(By.ID, "react-burger-menu-btn")
@@ -42,3 +33,9 @@ sleep(2)
 #Click o the About link
 webelement_of_about = driver.find_element(By.ID, "about_sidebar_link")
 webelement_of_about.click()
+
+assert driver.current_url == "https://saucelabs.com/"
+print("Test Case 1 Passed")
+#close browser
+sleep(5)
+driver.quit()
