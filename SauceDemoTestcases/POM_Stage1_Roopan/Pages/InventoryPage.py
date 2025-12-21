@@ -12,6 +12,7 @@ class InventoryPage:
     inventory_container = (By.ID, "inventory_container")
     burger_menu_button = (By.ID, "react-burger-menu-btn")
     logout_siedebar_link = (By.ID, "logout_sidebar_link")
+    clk_Backback_addtocart_button = (By.XPATH, "//a/div[text()='Sauce Labs Backpack']/following::button[1]")
 
 
     # ------------------- Actions -------------------
@@ -35,3 +36,9 @@ class InventoryPage:
         Clicks the logout link in the sidebar menu
         """
         self.driver.find_element(*self.logout_siedebar_link).click()
+
+    def click_Backpack_addtocart_button(self) -> None:
+        """
+        Clicks the 'Add to Cart' button for the Sauce Labs Backpack item
+        """
+        self.driver.find_element(*self.clk_Backback_addtocart_button).click()
