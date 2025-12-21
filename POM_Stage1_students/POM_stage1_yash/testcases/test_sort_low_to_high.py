@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
-from SauceDemoTestcases.POM_stage1_yash.pages.login_page import LoginPage
-from SauceDemoTestcases.POM_stage1_yash.pages.inventory_page import InventoryPage
+from POM_Stage1_students.POM_stage1_yash.pages.login_page import LoginPage
+from POM_Stage1_students.POM_stage1_yash.pages.inventory_page import InventoryPage
 
 def test_sort_products_low_to_high():
     driver = webdriver.Chrome()
